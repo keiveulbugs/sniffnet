@@ -8,6 +8,7 @@ pub fn choose_adapters_translation(language: Language) -> Text<'static> {
         Language::FR => "Sélectionnez une carte réseau à inspecter",
         Language::ES => "Seleccione el adaptador de red que desea inspeccionar",
         Language::PL => "Wybierz adapter sieciowy do inspekcji",
+        Language::NE => "Selecteer een netwerk adapter om te bekijken",
     })
 }
 
@@ -18,6 +19,7 @@ pub fn application_protocol_translation(language: Language) -> &'static str {
         Language::FR => "Protocole applicatif",
         Language::ES => "Protocolo de aplicación",
         Language::PL => "Protokół aplikacji",
+        Language::NE => "Applicatie protocol",
     }
 }
 
@@ -28,6 +30,7 @@ pub fn select_filters_translation(language: Language) -> Text<'static> {
         Language::FR => "Sélectionnez les filtres à appliquer sur le traffic réseau",
         Language::ES => "Seleccionar los filtros que se aplicarán al tráfico de red",
         Language::PL => "Wybierz filtry, które mają być zastosowane na ruchu sieciowym",
+        Language::NE => "Selecteer filters om toe te passen op netwerk activiteit", // netwerkverkeer is the literal translation, but netwerk activiteit is clearer and also correct
     })
 }
 
@@ -38,6 +41,7 @@ pub fn start_translation(language: Language) -> &'static str {
         Language::FR => "Commencer!",
         Language::ES => "¡Empieza!",
         Language::PL => "Rozpocznij!",
+        Language::NE => "Start!",
     }
 }
 
@@ -48,6 +52,7 @@ pub fn address_translation(language: Language) -> &'static str {
         Language::FR => "\nAdresse:",
         Language::ES => "\nDirección:",
         Language::PL => "\nAdres:",
+        Language::NE => "\nAdres:",
     }
 }
 
@@ -58,6 +63,7 @@ pub fn addresses_translation(language: Language) -> &'static str {
         Language::FR => "\nAdresses:",
         Language::ES => "\nDirecciones:",
         Language::PL => "\nAdresy:",
+        Language::NE => "\nAdressen:",
     }
 }
 
@@ -68,6 +74,7 @@ pub fn ip_version_translation(language: Language) -> Text<'static> {
         Language::FR => "Version IP",
         Language::ES => "Versión IP",
         Language::PL => "Wersja IP",
+        Language::NE => "IP versie",
     })
 }
 
@@ -78,6 +85,7 @@ pub fn transport_protocol_translation(language: Language) -> &'static str {
         Language::FR => "Protocole de transport",
         Language::ES => "Protocolo de transporte",
         Language::PL => "Protokół transportowy",
+        Language::NE => "Transport protocol",
     }
 }
 
@@ -88,6 +96,7 @@ pub fn traffic_rate_translation(language: Language) -> Text<'static> {
         Language::FR => "Fréquence du traffic:",
         Language::ES => "Tasa de tráfico:",
         Language::PL => "Prędkość ruchu:",
+        Language::NE => "Activiteit weergave:", // In the UI this fits better, Traffic rate literally translated is "Verkeersverhouding" but sounds weird.
     })
 }
 
@@ -98,6 +107,7 @@ pub fn relevant_connections_translation(language: Language) -> Text<'static> {
         Language::FR => "Connexions pertinentes:",
         Language::ES => "Conexiones Relevantes:",
         Language::PL => "Istotne połączenia:",
+        Language::NE => "Relevante connecties:",
     })
 }
 
@@ -108,6 +118,7 @@ pub fn settings_translation(language: Language) -> &'static str {
         Language::FR => "Paramètres",
         Language::ES => "Ajustes",
         Language::PL => "Ustawienia",
+        Language::NE => "Instellingen",
     }
 }
 
@@ -118,6 +129,7 @@ pub fn yes_translation(language: Language) -> Text<'static> {
         Language::FR => "Oui",
         Language::ES => "Sí",
         Language::PL => "Tak",
+        Language::NE => "Ja",
     })
 }
 
@@ -128,6 +140,7 @@ pub fn ask_quit_translation(language: Language) -> Text<'static> {
         Language::FR => "Êtes-vous sûr de vouloir quitter l'application ?",
         Language::ES => "¿Estás seguro de que quieres dejar este análisis?",
         Language::PL => "Czy na pewno chcesz zakończyć analizę?",
+        Language::NE => "Weet je zeker dat je de analyse wil verlaten?",
     })
 }
 
@@ -138,6 +151,7 @@ pub fn quit_analysis_translation(language: Language) -> String {
         Language::FR => "Quitter l'analyse".to_string(),
         Language::ES => "Quitar el análisis".to_string(),
         Language::PL => "Zakończ analize".to_string(),
+        Language::NE => "Verlaat analyse".to_string(),
     }
 }
 
@@ -148,6 +162,7 @@ pub fn ask_clear_all_translation(language: Language) -> Text<'static> {
         Language::FR => "Êtes-vous sûr de vouloir effacer les notifications ?",
         Language::ES => "¿Seguro que quieres borrar las notificaciones?",
         Language::PL => "Czy na pewno chcesz wyczyścić powiadomienia?",
+        Language::NE => "Weet je zeker dat je de notificaties wil wissen?",
     })
 }
 
@@ -158,6 +173,7 @@ pub fn clear_all_translation(language: Language) -> String {
         Language::FR => "Tout effacer".to_string(),
         Language::ES => "Borrar todo".to_string(),
         Language::PL => "Wyczyść wszystko".to_string(),
+        Language::NE => "Wis alles".to_string(),
     }
 }
 
@@ -168,6 +184,7 @@ pub fn hide_translation(language: Language) -> &'static str {
         Language::FR => "Masquer",
         Language::ES => "Ocultar",
         Language::PL => "Ukryj",
+        Language::NE => "Verberg",
     }
 }
 
@@ -188,6 +205,9 @@ pub fn no_addresses_translation(language: Language, adapter: &str) -> Text<'stat
         Language::PL => format!("Nie można zaobserwować żadnego ruchu, ponieważ wybrany adapter nie ma aktywnych adresów...\n\n\
                                  Adapter sieciowy: {adapter}\n\n\
                                  Jeśli jesteś pewien, że jesteś podłączony do internetu, spróbuj wybrać inny adapter."),
+        Language::NE => format!("Geen activiteit kan worden bekeken omdat de geselecteerde apdapter geen actieve adressen kan vinden...\n\n\
+                                 Netwerk adapter: {adapter}\n\n\
+                                 Als je zeker weet dat je verbonden met het internet, probeer dan een andere adapter."),
     })
 }
 
@@ -208,6 +228,9 @@ pub fn waiting_translation(language: Language, adapter: &str) -> Text<'static> {
         Language::PL => format!("Nie zaobserowano żadnego ruchu sieciowego. Oczekiwanie na pakiety...\n\n\
                                  Adapter sieciowy: {adapter}\n\n\
                                  Czy na pewno jesteś podłączony do internetu i wybrałeś właściwy adapter?"),
+        Language::NE => format!("Geen activiteit is gevonden tot dusver. Aan het wachten voor network activiteit...\n\n\
+                                 Netwerk adapter: {adapter}\n\n\
+                                 Ben je zeker dat je bent verbonden met het internet en de juiste adapter is geselecteerd?"),
     })
 }
 
